@@ -5,9 +5,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Rock Paper Scissors Lizard Spock</title>
+    <title>Rock, Paper, Scissors, Lizard, Spock</title>
 </head>
 <body>
+    <!--title and subtitle-->
+    <header>
+        <div class="header-content">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+            <h2>First to 10 wins!</h2>
+        </div>
+    </header>
+    <!--game area containing score-area, game-choices &reset button-->
+    <div class="game-area">
+     <!--score area-->    
+        <div class="scores">
+            <p class="score" id="player-score">You: <span id="player-score-number">0</span></p>
+            <p class="score" id="computer-score">Computer: <span id="computer-score-number">0</span></p>
+        </div>
+        <div id="winner-message">
+            <div id="winner"></div>
+            <div id="winner-explanation"></div>
+        </div>
+    <!--game choices, player clicks an option-->
+        <div class="options">
+            <div class="option" id="rock"></div>
+            <div class="option" id="paper"></div>
+            <div class="option" id="scissors"></div>
+            <div class="option" id="lizard"></div>
+            <div class="option" id="spock"></div>
+        </div>
+        <div class="choices">
+            <div class="choice" id="your-choice"></div>
+            <div class="choice" id="computer-choice"></div>
+        </div>
+    <!--reset button-->
+        <div class="reset">
+            <button id="reset-button">Play Again!</button>
+        </div>
+    </div>
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
