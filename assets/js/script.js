@@ -1,10 +1,13 @@
-let playerScore = document.getElementById("player-score-number");
-let computerScore = document.getElementById("computer-score-number");
-let winnerMessage = document.getElementById("winner-message");
-let winnerExplanation = document.getElementById("winner-explanation");
-let winner = document.getElementById("winner");
-let playerChoice = document.getElementById("your-choice");
-let computerChoice = document.getElementById("computer-choice");
+const playerScore = document.getElementById("player-score-number");
+const computerScore = document.getElementById("computer-score-number");
+const winnerMessage = document.getElementById("winner-message");
+const winnerExplanation = document.getElementById("winner-explanation");
+const winner = document.getElementById("winner");
+const playerChoiceImage = document.getElementById("your-choice");
+const computerChoiceImage = document.getElementById("computer-choice");
+let playerChoice = "";
+let computerChoice = "";
+const possibleComputerChoices = ["rock", "paper", "scissors", "lizard", "spock"];
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -16,15 +19,27 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 let option = this.getAttribute("id");
                 alert(`You clicked ${option}`);
+                makeChoices(option);
             }
         });
     }
 });
 
 function playGame() {}
-function showChoices() {}
+
+function makeChoices(option) {
+    playerChoice = option;
+
+    const randomChoice = Math.floor(Math.random() * 5);
+    computerChoice = possibleComputerChoices[randomChoice];
+}
+
 function checkWinner() {}
+
 function setWinnerMessage() {}
+
 function incrementScorePlayer() {}
+
 function incrementScoreComputer() {}
+
 function setWinner() {}
