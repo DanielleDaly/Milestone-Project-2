@@ -25,3 +25,19 @@ font-size: 1.5rem;
     width: 50%;
 
 }
+
+.choices {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.choice {
+    width: 45%;
+    display: inline-block;
+}
+
+.choice img {
+    width: 100%;
+    height: auto;
+}
