@@ -1,13 +1,20 @@
-const playerScore = document.getElementById("player-score-number");
-const computerScore = document.getElementById("computer-score-number");
+// On Screen Elements
+const playerScoreNumber = document.getElementById("player-score-number");
+const computerScoreNumber = document.getElementById("computer-score-number");
 const winnerMessage = document.getElementById("winner-message");
 const winnerExplanation = document.getElementById("winner-explanation");
 const winner = document.getElementById("winner");
 const playerChoiceImage = document.getElementById("your-choice-image");
 const computerChoiceImage = document.getElementById("computer-choice-image");
+
+// Game Variables
 let playerChoice = "";
 let computerChoice = "";
 const possibleComputerChoices = ["rock", "paper", "scissors", "lizard", "spock"];
+let currentRoundWinner = "";
+let playerScore = 0;
+let computerScore = 0;
+
 
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
@@ -35,15 +42,77 @@ function makeChoices(option) {
     computerChoiceImage.setAttribute('src', `assets/images/${computerChoice}.svg`);
 
 
-    checkWinner();
+    checkWinner(playerChoice, computerChoice);
 }
 
-function checkWinner() {}
+function checkWinner(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        currentRoundWinner = "draw";
+    } else if (playerChoice === "rock" && computerChoice === "paper") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "rock" && computerChoice === "scissors") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "rock" && computerChoice === "lizard") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "rock" && computerChoice === "spock") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "paper" && computerChoice === "rock") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "paper" && computerChoice === "scissors") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "paper" && computerChoice === "lizard") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "paper" && computerChoice === "spock") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "scissors" && computerChoice === "rock") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "scissors" && computerChoice === "paper") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "scissors" && computerChoice === "lizard") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "scissors" && computerChoice === "spock") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "lizard" && computerChoice === "rock") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "lizard" && computerChoice === "paper") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "lizard" && computerChoice === "scissors") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "lizard" && computerChoice === "spock") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "spock" && computerChoice === "rock") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "spock" && computerChoice === "paper") {
+        currentRoundWinner = "computer";
+    } else if (playerChoice === "spock" && computerChoice === "scissors") {
+        currentRoundWinner = "player";
+    } else if (playerChoice === "spock" && computerChoice === "lizard") {
+        currentRoundWinner = "computer";
+    }
 
-function setWinnerMessage() {}
+    if (currentRoundWinner == "computer") {
+        alert("Computer Wins!");
+        incrementScoreComputer();
+    } else if (currentRoundWinner == "player") {
+        alert("You Win!");
+        incrementScorePlayer();
+    } else {
+        alert("Draw!");
+    }
+}
 
-function incrementScorePlayer() {}
+function setWinnerMessage() {
 
-function incrementScoreComputer() {}
+}
+
+function incrementScorePlayer() {
+    playerScore++;
+    playerScoreNumber.innerHTML = playerScore;
+}
+
+function incrementScoreComputer() {
+    computerScore++;
+    computerScoreNumber.innerHTML = computerScore;
+}
 
 function setWinner() {}
