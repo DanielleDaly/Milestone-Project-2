@@ -16,7 +16,7 @@
         </div>
     </header>
     <!--game area containing score-area, game-choices &reset button-->
-    <div class="game-area">
+    <div id="game-area" class="game-area">
      <!--score area-->    
         <div class="scores">
             <p class="score" id="player-score">You: <span id="player-score-number">0</span></p>
@@ -55,6 +55,13 @@
     <!--reset button-->
         <div class="reset">
             <button id="reset-button">Reset Game</button>
+        </div>
+    </div>
+
+    <div id="winner-screen">
+        <h1 id="winner-screen-message"></h1>
+        <div class="reset">
+            <button id="play-again-button">Play Again!</button>
         </div>
     </div>
 

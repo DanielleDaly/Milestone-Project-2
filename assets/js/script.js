@@ -6,6 +6,9 @@ const winnerExplanation = document.getElementById("winner-explanation");
 const winner = document.getElementById("winner");
 const playerChoiceImage = document.getElementById("your-choice-image");
 const computerChoiceImage = document.getElementById("computer-choice-image");
+const winnerScreenMessage = document.getElementById("winner-screen-message");
+const winnerScreen = document.getElementById("winner-screen");
+const gameArea = document.getElementById("game-area");
 
 // Game Variables
 let playerChoice = "";
@@ -42,81 +45,82 @@ function makeChoices(option) {
     computerChoice = possibleComputerChoices[randomChoice];
     computerChoiceImage.setAttribute('src', `assets/images/${computerChoice}.svg`);
 
-
-    checkWinner(playerChoice, computerChoice);
+    checkRoundWinner(playerChoice, computerChoice);
 }
 
-function checkWinner(playerChoice, computerChoice) {
+function checkRoundWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         currentRoundWinner = "draw";
         currentRoundWinnerMessage = "Tie. You're both losers!";
     } else if (playerChoice === "rock" && computerChoice === "paper") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Paper covers Rock. Computer Wins!";
+        currentRoundWinnerMessage = "Paper Covers Rock. Computer Wins!";
     } else if (playerChoice === "rock" && computerChoice === "scissors") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Rock crushes Scissors. You Win!";
+        currentRoundWinnerMessage = "Rock Crushes Scissors. You Win!";
     } else if (playerChoice === "rock" && computerChoice === "lizard") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Rock crushes Lizard. You Win!";
+        currentRoundWinnerMessage = "Rock Crushes Lizard. You Win!";
     } else if (playerChoice === "rock" && computerChoice === "spock") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Spock vaporizes Rock. Computer Wins!";
+        currentRoundWinnerMessage = "Spock Vaporizes Rock. Computer Wins!";
     } else if (playerChoice === "paper" && computerChoice === "rock") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Paper covers Rock. You Win!";
+        currentRoundWinnerMessage = "Paper Covers Rock. You Win!";
     } else if (playerChoice === "paper" && computerChoice === "scissors") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Scissors cuts Paper. Computer Wins!";
+        currentRoundWinnerMessage = "Scissors Cuts Paper. Computer Wins!";
     } else if (playerChoice === "paper" && computerChoice === "lizard") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Lizard eats Paper. Computer Wins!";
+        currentRoundWinnerMessage = "Lizard Eats Paper. Computer Wins!";
     } else if (playerChoice === "paper" && computerChoice === "spock") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Paper disproves Spock. You Win!";
+        currentRoundWinnerMessage = "Paper Disproves Spock. You Win!";
     } else if (playerChoice === "scissors" && computerChoice === "rock") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Rock crushes Paper. Computer Wins!";
+        currentRoundWinnerMessage = "Rock Crushes Paper. Computer Wins!";
     } else if (playerChoice === "scissors" && computerChoice === "paper") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Scissors cuts Paper. You Win!";
+        currentRoundWinnerMessage = "Scissors Cuts Paper. You Win!";
     } else if (playerChoice === "scissors" && computerChoice === "lizard") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Scissors decapitates Lizard. You Win!";
+        currentRoundWinnerMessage = "Scissors Decapitates Lizard. You Win!";
     } else if (playerChoice === "scissors" && computerChoice === "spock") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Spock smashes Scissors. Computer Wins!";
+        currentRoundWinnerMessage = "Spock Smashes Scissors. Computer Wins!";
     } else if (playerChoice === "lizard" && computerChoice === "rock") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Rock crushes Lizard. Computer Wins!";
+        currentRoundWinnerMessage = "Rock Crushes Lizard. Computer Wins!";
     } else if (playerChoice === "lizard" && computerChoice === "paper") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Lizard eats Paper. You Win!";
+        currentRoundWinnerMessage = "Lizard Eats Paper. You Win!";
     } else if (playerChoice === "lizard" && computerChoice === "scissors") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Scissors decapitates Lizard. Computer Wins!";
+        currentRoundWinnerMessage = "Scissors Decapitates Lizard. Computer Wins!";
     } else if (playerChoice === "lizard" && computerChoice === "spock") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Lizard poisons Spock. You Win!";
+        currentRoundWinnerMessage = "Lizard Poisons Spock. You Win!";
     } else if (playerChoice === "spock" && computerChoice === "rock") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Spock vaporizes Rock. You Win!";
+        currentRoundWinnerMessage = "Spock Vaporizes Rock. You Win!";
     } else if (playerChoice === "spock" && computerChoice === "paper") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Paper disproves Spock. Computer Wins!";
+        currentRoundWinnerMessage = "Paper Disproves Spock. Computer Wins!";
     } else if (playerChoice === "spock" && computerChoice === "scissors") {
         currentRoundWinner = "player";
-        currentRoundWinnerMessage = "Spock crushes Scissors. You Win!";
+        currentRoundWinnerMessage = "Spock Crushes Scissors. You Win!";
     } else if (playerChoice === "spock" && computerChoice === "lizard") {
         currentRoundWinner = "computer";
-        currentRoundWinnerMessage = "Lizard poisons Spock. Computer Wins!";
+        currentRoundWinnerMessage = "Lizard Poisons Spock. Computer Wins!";
     }
 
-    if (currentRoundWinner == "computer") {
+    if (currentRoundWinner === "computer") {
         incrementScoreComputer();
-    } else if (currentRoundWinner == "player") {
+    } else if (currentRoundWinner === "player") {
         incrementScorePlayer();
     }
+
+    checkGameWinner();
 
     winnerMessage.innerHTML = currentRoundWinnerMessage;
 }
@@ -131,7 +135,21 @@ function incrementScoreComputer() {
     computerScoreNumber.innerHTML = computerScore;
 }
 
-function setWinner() {}
+function checkGameWinner() {
+    if (playerScore === 10) {
+        winnerScreenMessage.innerHTML = "Congratulations! You are the Winner!";
+        // Hide game area
+        gameArea.style.display = "none";
+        // Show Winner Screen
+        winnerScreen.style.display = "block";
+    } else if (computerScore === 10) {
+        winnerScreenMessage.innerHTML = "Unlucky! Computer Wins!";
+        // Hide game area
+        gameArea.style.display = "none";
+        // Show Winner Screen
+        winnerScreen.style.display = "block";
+    }
+}
 
 function resetGame() {
     playerChoice = "";
@@ -147,5 +165,4 @@ function resetGame() {
     winnerExplanation.innerHTML = "";
     playerChoiceImage.innerHTML = "";
     computerChoiceImage.innerHTML = "";
-
 }
