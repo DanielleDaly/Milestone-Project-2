@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("id") === "reset-button") {
-                alert("You clicked Play Again!");
+                resetGame();
             } else {
                 let option = this.getAttribute("id");
                 makeChoices(option);
@@ -121,10 +121,6 @@ function checkWinner(playerChoice, computerChoice) {
     winnerMessage.innerHTML = currentRoundWinnerMessage;
 }
 
-function setWinnerMessage() {
-
-}
-
 function incrementScorePlayer() {
     playerScore++;
     playerScoreNumber.innerHTML = playerScore;
@@ -136,3 +132,20 @@ function incrementScoreComputer() {
 }
 
 function setWinner() {}
+
+function resetGame() {
+    playerChoice = "";
+    computerChoice = "";
+    currentRoundWinner = "";
+    currentRoundWinnerMessage = "";
+    playerScore = 0;
+    computerScore = 0;
+
+    playerScoreNumber.innerHTML = playerScore;
+    computerScoreNumber.innerHTML = computerScore;
+    winnerMessage.innerHTML = "";
+    winnerExplanation.innerHTML = "";
+    playerChoiceImage.innerHTML = "";
+    computerChoiceImage.innerHTML = "";
+
+}
