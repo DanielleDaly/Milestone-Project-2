@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("id") === "reset-button") {
+            if (this.getAttribute("id") === "reset-button" || this.getAttribute("id") === "play-again-button") {
                 resetGame();
             } else {
                 let option = this.getAttribute("id");
@@ -138,15 +138,11 @@ function incrementScoreComputer() {
 function checkGameWinner() {
     if (playerScore === 10) {
         winnerScreenMessage.innerHTML = "Congratulations! You are the Winner!";
-        // Hide game area
         gameArea.style.display = "none";
-        // Show Winner Screen
         winnerScreen.style.display = "block";
     } else if (computerScore === 10) {
         winnerScreenMessage.innerHTML = "Unlucky! Computer Wins!";
-        // Hide game area
         gameArea.style.display = "none";
-        // Show Winner Screen
         winnerScreen.style.display = "block";
     }
 }
@@ -165,4 +161,10 @@ function resetGame() {
     winnerExplanation.innerHTML = "";
     playerChoiceImage.innerHTML = "";
     computerChoiceImage.innerHTML = "";
+
+    playerChoiceImage.setAttribute('src', `assets/images/default-image.png`);
+    computerChoiceImage.setAttribute('src', `assets/images/default-image.png`);
+
+    gameArea.style.display = "block";
+    winnerScreen.style.display = "none";
 }
