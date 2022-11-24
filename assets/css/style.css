@@ -21,7 +21,7 @@ body {
     margin-top: 0;
 }
 
-/*  Game Area, containing scores, game-buttons and reset button */
+/*  Game Area, containing scores, round-winner message, game-buttons and reset button */
 .game-area {
     width: 100%;
     max-width: 800px;
@@ -31,6 +31,7 @@ body {
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
 }
 
+/* Scores */
 .scores {
     height: 50px;
     margin-bottom: 2rem;
@@ -45,6 +46,15 @@ body {
     font-size: 1.5 rem;
     line-height: 50px;
 }
+
+/* Round-Winner */
+.round-winner-message {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
 
 .option {
     display: inline-block;
