@@ -112,7 +112,7 @@ body {
     background-color: white;
 }
 
-/* Reset Game Button */
+/* Reset Game Button and Play Again Button */
 .reset-button {
     padding: 0.75rem 1 rem;
     font-size: 1.5rem;
@@ -129,7 +129,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 }
 
-/* Game Rules */
+/* Game Rules, describes to the user how to play the game */
 .game-rules {
     width: 100%;
     max-width: 800px;
@@ -158,25 +158,14 @@ body {
     margin-bottom: 0.5rem;
 }
 
+/* Winner Screen, displays winner of first to win 10 rounds */
 
-
-.scores {
-    padding-top: 10px;
-    padding-bottom: 40px;
-}
-
-/* */
-
-.score {
-    display: inline;
-    width: 50%;
-
-}
-
-
-
-/* */
-
-#winner-screen {
+.winner-screen {
     display: none;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 1rem 2rem;
+    background-color: #DEDEDE;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px, 5px, 15px;
 }
