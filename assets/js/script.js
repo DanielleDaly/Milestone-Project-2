@@ -9,6 +9,7 @@ const computerChoiceImage = document.getElementById("computer-choice-image");
 const winnerScreenMessage = document.getElementById("winner-screen-message");
 const winnerScreen = document.getElementById("winner-screen");
 const gameArea = document.getElementById("game-area");
+const gameRules = document.getElementById("game-rules");
 
 // Game Variables
 let playerChoice = "";
@@ -139,6 +140,7 @@ function checkGameWinner() {
     if (playerScore === 10) {
         winnerScreenMessage.innerHTML = "Congratulations! You are the Winner!";
         gameArea.style.display = "none";
+        gameRules.style.display = "none";
         winnerScreen.style.display = "block";
     } else if (computerScore === 10) {
         winnerScreenMessage.innerHTML = "Unlucky! Computer Wins!";
@@ -158,8 +160,7 @@ function resetGame() {
 
     playerScoreNumber.innerHTML = playerScore;
     computerScoreNumber.innerHTML = computerScore;
-    winnerMessage.innerHTML = "";
-    winnerExplanation.innerHTML = "";
+    winnerMessage.innerHTML = "Make your choice below... or scroll down for Rules";
     playerChoiceImage.innerHTML = "";
     computerChoiceImage.innerHTML = "";
 
