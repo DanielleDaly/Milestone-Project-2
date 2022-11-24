@@ -21,7 +21,7 @@ body {
     margin-top: 0;
 }
 
-/*  Game Area, containing scores, round-winner message, game-buttons and reset button */
+/*  Game Area, containing score-area, current choice , round-winner message, game-buttons and reset button */
 .game-area {
     width: 100%;
     max-width: 800px;
@@ -31,7 +31,7 @@ body {
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
 }
 
-/* Scores */
+/* Scores Area */
 .scores {
     height: 50px;
     margin-bottom: 2rem;
@@ -47,12 +47,40 @@ body {
     line-height: 50px;
 }
 
+/* Display Current Choice */
+.choices {
+    width: 100px;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.choice {
+    display: inline-block;
+    width: 275px;
+    height: 275px;
+    margin-right: 40px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15 px;
+}
+
+.choice:last-child {
+    margin-right: 0;
+}
+
+.choice img {
+    width: 100%;
+    height: auto;
+}
 /* Round-Winner */
-.round-winner-message {
+.winner-message {
     margin-bottom: 2rem;
     font-size: 1.5rem;
     font-weight: 700;
 }
+
+/* Game Buttons, user chooses from options */
+
 
 
 
