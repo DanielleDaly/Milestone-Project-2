@@ -143,6 +143,7 @@ function checkGameWinner() {
     } else if (computerScore === 10) {
         winnerScreenMessage.innerHTML = "Unlucky! Computer Wins!";
         gameArea.style.display = "none";
+        gameRules.style.display ="none";
         winnerScreen.style.display = "block";
     }
 }
@@ -166,5 +167,7 @@ function resetGame() {
     computerChoiceImage.setAttribute('src', `assets/images/default-image.png`);
 
     gameArea.style.display = "block";
+    gameRules.style.display = "block";
     winnerScreen.style.display = "none";
+
 }
