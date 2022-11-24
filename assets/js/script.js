@@ -20,7 +20,8 @@ let currentRoundWinnerMessage = "";
 let playerScore = 0;
 let computerScore = 0;
 
-
+//Wait for the DOM to finish loading before running the game
+//Get the button elements and add event listeners to them
 document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
@@ -36,8 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+/** */
 function playGame() {}
 
+// Creates a random choice from the option rock, paper, scissors, lizard, spock
 function makeChoices(option) {
     playerChoice = option;
     playerChoiceImage.setAttribute('src', `assets/images/${playerChoice}.svg`);
@@ -49,6 +52,7 @@ function makeChoices(option) {
     checkRoundWinner(playerChoice, computerChoice);
 }
 
+// // Checks Round Winner and Increments Scores
 function checkRoundWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         currentRoundWinner = "draw";
@@ -115,6 +119,7 @@ function checkRoundWinner(playerChoice, computerChoice) {
         currentRoundWinnerMessage = "Lizard Poisons Spock. Computer Wins!";
     }
 
+    
     if (currentRoundWinner === "computer") {
         incrementScoreComputer();
     } else if (currentRoundWinner === "player") {
@@ -136,6 +141,7 @@ function incrementScoreComputer() {
     computerScoreNumber.innerHTML = computerScore;
 }
 
+// Displays Winner Message
 function checkGameWinner() {
     if (playerScore === 10) {
         winnerScreenMessage.innerHTML = "Congratulations! You are the Winner!";
@@ -150,6 +156,7 @@ function checkGameWinner() {
     }
 }
 
+// Resets Game
 function resetGame() {
     playerChoice = "";
     computerChoice = "";
