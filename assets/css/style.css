@@ -112,7 +112,23 @@ body {
     background-color: white;
 }
 
-/* */
+/* Reset Game Button */
+.reset-button {
+    padding: 0.75rem 1 rem;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    background-color: black;
+    border: solid 2px black;
+    transition: all 0.2s ease-out;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px;
+}
+
+.reset-button:active {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
+}
+
 
 .scores {
     padding-top: 10px;
@@ -127,27 +143,7 @@ body {
 
 }
 
-/* */
 
-.choices {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-/* */
-
-.choice {
-    width: 45%;
-    display: inline-block;
-}
-
-/* */
-
-.choice img {
-    width: 100%;
-    height: auto;
-}
 
 /* */
 
