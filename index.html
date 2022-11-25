@@ -27,52 +27,51 @@
             <p class="score" id="computer-score">Computer: <span id="computer-score-number">0</span></p>
         </div>
     
-    <!-- Display Current Choice -->
+        <!-- Display Current Choice -->
         <div class="choices">
-            <div class="choice">
-                <img id="your-choice-image" src="assets/images/default-image.png" alt="paper">
+            <div id="user-choice" class="choice">
+                <img id="your-choice-image" src="assets/images/default-image.png" alt="Default image before user makes a selection.">
             </div>
-            <div class="choice">
-                <img id="computer-choice-image" src="assets/images/default-image.png" alt="rock">
+            <div id="player-choice" class="choice">
+                <img id="computer-choice-image" src="assets/images/default-image.png" alt="Default image before computer makes a selection.">
             </div>
         </div>
 
-    <!-- Round Winner Message --> 
-    <div id="winner-message" class="winner-message">
-        Make your choice below ... or scroll down for the Rules
-    </div>
+        <!-- Round Winner Message --> 
+        <h2 id="winner-message" class="winner-message">
+            Make your choice below ... or scroll down for the Rules
+        </h2>
 
-    <!-- Game Buttons, player clicks an option -->
+        <!-- Game Buttons, player clicks an option -->
         <div class="options">
-            <button class="option" id="rock">
-                <img src="assets/images/rock.svg" alt="rock">
+            <button class="option" id="rock" aria-controls="user-choice">
+                <img src="assets/images/rock.svg" alt="Image representing the Rock option">
             </button>
-            <button class="option" id="paper">
-                <img src="assets/images/paper.svg" alt="paper">
+            <button class="option" id="paper" aria-controls="user-choice">
+                <img src="assets/images/paper.svg" alt="Image representing the Rock option">
             </button>
-            <button class="option" id="scissors">
-                <img src="assets/images/scissors.svg" alt="scissors">
+            <button class="option" id="scissors" aria-controls="user-choice">
+                <img src="assets/images/scissors.svg" alt="Image representing the Scissors option">
             </button>
-            <button class="option" id="lizard">
-                <img src="assets/images/lizard.svg" alt="lizard">
+            <button class="option" id="lizard" aria-controls="user-choice">
+                <img src="assets/images/lizard.svg" alt="Image representing the Lizard option">
             </button>
-            <button class="option" id="spock">
-                <img src="assets/images/spock.svg" alt="spock">
+            <button class="option" id="spock" aria-controls="user-choice">
+                <img src="assets/images/spock.svg" alt="Image representing the Spock option">
             </button>
         </div>
 
-    <!-- Reset Button -->
+        <!-- Reset Button -->
         <div class="reset">
             <button id="reset-button" class="reset-button">Reset Game</button>
         </div>
-    </div>
     </section>
 
     <!-- Game Rules -->
-    <div id="game-rules" class="game-rules">
+    <section id="game-rules" class="game-rules" role="complementary">
         <h2>Game Rules</h2>
-        <p>Choose from Rock, Paper, Scissors, Lizard or Spock</p>
-        <p>If both the player and the computer choose the same option, it's a tie and no points are given</p>
+        <p>Choose an option from Rock, Paper, Scissors, Lizard or Spock.</p>
+        <p>If both the player and the computer choose the same option, it's a tie and no points are given.</p>
         <p>The first to win 10 rounds is the Winner!</p>
         <ul class="game-rules-list">
             <li class="game-rules-list-item">Scissors Cuts Paper</li>
@@ -86,15 +85,15 @@
             <li class="game-rules-list-item">Spcok Vaporises Rock</li>
             <li class="game-rules-list-item">(and as it always has) Rock crushes Scissors</li>
         </ul>
-    </div>
+    </section>
 
     <!-- Winner Screen -->
-    <div id="winner-screen" class="winner-screen">
-        <h1 id="winner-screen-message"></h1>
+    <section id="winner-screen" class="winner-screen" role="complementary">
+        <h2 id="winner-screen-message">And the winner is...</h2>
         <div class="reset">
-            <button id="play-again-button" class="reset-button">Play Again!</button>
+            <button id="play-again-button" class="reset-button" aria-controls="game-area">Play Again!</button>
         </div>
-    </div>
+    </section>
 
     <script src="assets/js/script.js"></script>
 </body>
