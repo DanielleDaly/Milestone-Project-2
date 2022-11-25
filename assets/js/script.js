@@ -52,7 +52,7 @@ function makeChoices(option) {
     checkRoundWinner(playerChoice, computerChoice);
 }
 
-// // Checks Round Winner and Increments Scores
+// Checks Round Winner and Increments Scores
 function checkRoundWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         currentRoundWinner = "draw";
