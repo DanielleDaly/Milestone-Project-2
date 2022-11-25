@@ -68,7 +68,7 @@ body {
     margin-right: 40px;
     border-radius: 50%;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15 px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .choice:last-child {
@@ -121,13 +121,13 @@ body {
     color: white;
     text-transform: uppercase;
     background-color: black;
-    border: solid 2px black;
     transition: all 0.2s ease-out;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 20px;
 }
 
 .reset-button:hover {
     background-color: #FD7C6D;
+    border: solid 2px black;
     color: black;
     cursor: pointer;
 }
@@ -177,6 +177,8 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px, 5px, 15px;
 }
 
+/* Media Queries */
+/* Screens of 768px wide and below */
 @media screen and (max-width:  768px) {
     body {
         padding: 1.5rem;
@@ -189,8 +191,7 @@ body {
     }
 }
 
-/* Media Queries */
-
+/* Screens of 600px wide and below */
 @media screen and (max-width: 600px) {
     body {
         padding: 1rem;
