@@ -62,7 +62,7 @@ It is a simple game where the user makes a choice and this is compared to a rand
 
 ## Existing Features
 
-## Header
+### Header
 
 The header contains the name of the game: 'Rock, Paper, Scissors, Lizard, Spock'. It also contains a sub-heading “First to 10 Wins!”. This lets the player know at a glance what the purpose of the website is. It also informs the user that the winner is the first player to win 10 rounds of the game. The font used is simple, unembelished and clear. The reason for choosing Arial as the font was to make it easy to read and accessible for all users. The heading also uses contrasting colours to incerase the accessibility of the website and bright colours are used to give a cheerful, informal and visually appealing experience to the user.
 
@@ -142,6 +142,7 @@ At the end of the page there is a "Reset Button". If a player wants to restart t
 
 
 <h3 align="center"><img src="assets/images/screenshots/screenshot-reset-button-hover.png"></h3>
+
 
 
 ## Rules Panel
