@@ -291,7 +291,7 @@ The live link can be found here:
 
 - The rules of the game were taken from a video from the Big Bang Theory television show where one of the characters "Sheldon Cooper" describes the rules of the game. A link to this video can be found here: [(https://www.youtube.com/watch?v=pIpmITBocfM)]
 
--All other content was written by myself.
+- All other content was written by myself.
 
 ## Media
 
