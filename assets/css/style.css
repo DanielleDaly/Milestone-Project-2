@@ -136,7 +136,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 5px;
 }
 
-/* Game Rules, describes to the user how to play the game */
+/* Game Rules, describes to the player how to play the game */
 .game-rules {
     width: 100%;
     max-width: 800px;

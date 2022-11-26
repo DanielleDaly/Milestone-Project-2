@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /**
  * makeChoices
- * Sets the user's choice and randomly generates a choice for the computer player
- * @param {string} option - The users chosen option
+ * Sets the player's choice and randomly generates a choice for the computer player
+ * @param {string} option - The players chosen option
  */
 function makeChoices(option) {
     // Set the playerChoice and display the relevant image for the playerChoiceImage element
@@ -64,11 +64,11 @@ function makeChoices(option) {
 
 /**
  * checkRoundWinner
- * Checks the choices made by the user and computer and determines which is the winner of the round
- * Calls the function to increment the user's / computer's score depending on who won
+ * Checks the choices made by the player and computer and determines which is the winner of the round
+ * Calls the function to increment the player's / computer's score depending on who won
  * Calls the checkGameWinner function to see if the game has been won
  * Sets the contents of the on-screen winner message
- * @param {*} playerChoice - The user's choice
+ * @param {*} playerChoice - The player's choice
  * @param {*} computerChoice  - The computer's choice
  */
 function checkRoundWinner(playerChoice, computerChoice) {
@@ -155,12 +155,12 @@ function checkRoundWinner(playerChoice, computerChoice) {
 
 /**
  * incrementScorePlayer
- * Increments the user's score and sets the on-screen user score number with the updated score
+ * Increments the player's score and sets the on-screen player score number with the updated score
  */
 function incrementScorePlayer() {
-     // Increment user's score
+     // Increment player's score
     playerScore++;
-    // Set the on-screen user's score
+    // Set the on-screen player's score
     playerScoreNumber.innerHTML = playerScore;
 }
 
@@ -177,13 +177,13 @@ function incrementScoreComputer() {
 
 /**
  * checkGameWinner
- * Determine if the user / computer has won 10 rounds
+ * Determine if the player / computer has won 10 rounds
  * Set the on-screen message on the winner screen
  * Hide the game area and game rules panel
  * Display the winner screen
  */
 function checkGameWinner() {
-    // Check if the user / computer have won 10 rounds
+    // Check if the player / computer have won 10 rounds
     if (playerScore === 10) {
         // Set the winner message on the winner screen to the appropriate message
         winnerScreenMessage.innerHTML = "Congratulations! You are the Winner!";
