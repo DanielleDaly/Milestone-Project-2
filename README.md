@@ -6,6 +6,12 @@ This is a responsive website created using HTML, CSS and JavaScript. The main fu
 
 It is a simple game where the user makes a choice and this is compared to a randomly generated choice from a predetermined list of possiblities, i.e. Rock, Paper, Scissors, Lizard or Spock. Based on a defined set of rules, for which option defeats another, the winner of each round is determined. The first to win 10 rounds is the overall winner.
 
+<h3 align="center"><img src="assets/images/screenshots/screenshot-responsive-home-page.png"></h3>
+
+
+**View the live project here:** https://danielledaly.github.io/Milestone-Project-2/
+
+
 ## User Stories
 
 **As a user I would like to see the name of the game and a simple explanation of how the game is won.**
@@ -283,18 +289,18 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here:
+The live link can be found here: https://danielledaly.github.io/Milestone-Project-2/
 
 ## Credits
 
 ### Content
 
-- The rules of the game were taken from a video from the Big Bang Theory television show where one of the characters "Sheldon Cooper" describes the rules of the game. A link to this video can be found here: [(https://www.youtube.com/watch?v=pIpmITBocfM)]
+- The rules of the game were taken from a video from the Big Bang Theory television show where one of the characters "Sheldon Cooper" describes the rules of the game. A link to this video can be found here: https://www.youtube.com/watch?v=pIpmITBocfM
 
 - All other content was written by myself.
 
 ## Media
 
-- The images for the game buttons and game results were taken from [(https://cla-cif.github.io/RPS-Lizard-Spock/)]
+- The images for the game buttons and game results were taken from https://cla-cif.github.io/RPS-Lizard-Spock/
 
-- For the favicon I used an online converter [(https://www.favicon-generator.org/)] to generate a favicon of the lizard image from the above. 
+- For the favicon I used an online converter https://www.favicon-generator.org/ to generate a favicon of the lizard image from the above. 
